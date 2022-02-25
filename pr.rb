@@ -1,9 +1,20 @@
-puts "入力してみましょう"
-input_key = gets
-puts "入力された内容は#{input_key}です"
+#数値あてゲーム
 
-amounts = {"りんご"=> 2,"いちご"=>5,"オレンジ"=>3}
+n = rand(1..100)
+m = 0
 
-amounts.each do |fruit,amount|
-  puts "#{fruit}は#{amount}個です"
+loop do
+  p "入力してください"
+  m = gets.to_i
+  
+  if m > n
+   p  "もっと小さいです"
+  elsif m < n
+   p  "もっと大きいです"
+  else
+    break
+  end
+      
 end
+
+p "正解です"
